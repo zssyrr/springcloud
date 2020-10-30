@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: SEARCH
+  rabbitmq:
+    host: 192.168.59.10
+    port: 5672
+    username: openapi-admin
+    password: openapi-admin
+    virtual-host: openapi-admin
+  cloud:
+    stream:
+      bindings:
+        cloud-queue:
+          group: search
+      rabbit:
+        bindings:
+          cloud-queue:
+            consumer:
+              acknowledgeMode: manual
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

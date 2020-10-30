@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: EUREKA
+#  security:
+#    user:
+#      name: admin
+#      password: admin
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#    service-url:
+#      defaultZone: http://admin:admin@localhost:8762/eureka/,http://admin:admin@localhost:8763/eureka/
+#  instance:
+#    hostname: localhost

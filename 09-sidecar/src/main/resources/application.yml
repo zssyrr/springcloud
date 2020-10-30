@@ -1,0 +1,13 @@
+server:
+  port: 7777
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: SIDECAR
+
+sidecar:
+  port: 60000

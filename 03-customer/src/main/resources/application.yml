@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: CUSTOMER-${version}
+  rabbitmq:
+    host: 192.168.59.10
+    port: 5672
+    username: openapi-admin
+    password: openapi-admin
+    virtual-host: openapi-admin
+
+version: v1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+#SEARCH:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+feign:
+  hystrix:
+    enabled: true
